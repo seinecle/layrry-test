@@ -9,7 +9,7 @@ import javafx.scene.layout.VBox;
 public class PluginA extends AbstractPlugin {
 
     @Override
-    protected GridPane createTile(PluginContext context) {
+    protected GridPane createPane(PluginContext context) {
 
         GridPane pane = new GridPane();
         VBox vBox = new VBox(new Label("Léon est le plus intelligent depuis le plugin!!"));

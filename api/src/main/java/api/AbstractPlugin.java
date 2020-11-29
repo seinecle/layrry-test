@@ -15,8 +15,8 @@ import java.util.function.Function;
 import javafx.scene.layout.GridPane;
 
 public abstract class AbstractPlugin implements Plugin, PluginContext.HeartbeatListener {
-    private static final String TILE_ID = "TILE_ID";
-    private GridPane tile;
+    private static final String PANE_ID = "PANE_ID";
+    private GridPane pane;
 
     @Override
     public final CompletionStage<Plugin> register(PluginContext context) {
@@ -65,8 +65,8 @@ public abstract class AbstractPlugin implements Plugin, PluginContext.HeartbeatL
         return getClass().getName();
     }
 
-    public final GridPane getTile() {
-        return tile;
+    public final GridPane getPane() {
+        return pane;
     }
 
     @Override
@@ -75,27 +75,27 @@ public abstract class AbstractPlugin implements Plugin, PluginContext.HeartbeatL
     }
 
     private void createAndAddToContainer(PluginContext context) {
-        tile = createTile(context);
-        tile.getProperties().put(TILE_ID, getId());
-        context.getTileContainer().getChildren().add(tile);
+        pane = createPane(context);
+        pane.getProperties().put(PANE_ID, getId());
+        context.getPane().getChildren().add(pane);
         context.addHeartbeatListener(this);
-//        tile.setRunning(true);
+//        pane.setRunning(true);
     }
 
     private void removeFromContainer(PluginContext context) {
         context.removeHeartbeatListener(this);
-        context.getTileContainer().getChildren().removeIf(this::idMatches);
-//        tile.setRunning(false);
-//        tile.stop();
+        context.getPane().getChildren().removeIf(this::idMatches);
+//        pane.setRunning(false);
+//        pane.stop();
     }
 
-    protected abstract GridPane createTile(PluginContext context);
+    protected abstract GridPane createPane(PluginContext context);
 
     private boolean idMatches(final Node node) {
         return idMatcher(getId()).apply(node);
     }
 
     private Function<Node, Boolean> idMatcher(final String id) {
-        return node -> id.equals(node.getProperties().get(TILE_ID));
+        return node -> id.equals(node.getProperties().get(PANE_ID));
     }
 }

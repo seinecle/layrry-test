@@ -15,16 +15,16 @@ public class PluginContext {
     private static final Random RND = new Random();
 
     private static PluginContext instance;
-    private final int tileWidth;
-    private final int tileHeight;
-    private final GridPane tileContainer;
+    private final int paneWidth;
+    private final int paneHeight;
+    private final GridPane pane;
     private final Set<HeartbeatListener> listeners = new CopyOnWriteArraySet<>();
     private final Heartbeat heartbeat;
 
-    private PluginContext(int tileWidth, int tileHeight, GridPane tileContainer) {
-        this.tileWidth = tileWidth;
-        this.tileHeight = tileHeight;
-        this.tileContainer = tileContainer;
+    private PluginContext(int tileWidth, int tileHeight, GridPane pane) {
+        this.paneWidth = tileWidth;
+        this.paneHeight = tileHeight;
+        this.pane = pane;
         this.heartbeat = new Heartbeat();
         this.heartbeat.start();
     }
@@ -33,16 +33,16 @@ public class PluginContext {
         heartbeat.stop();
     }
 
-    public int getTileWidth() {
-        return tileWidth;
+    public int getPaneWidth() {
+        return paneWidth;
     }
 
-    public int getTileHeight() {
-        return tileHeight;
+    public int getPaneHeight() {
+        return paneHeight;
     }
 
-    public GridPane getTileContainer() {
-        return tileContainer;
+    public GridPane getPane() {
+        return pane;
     }
 
     public void addHeartbeatListener(HeartbeatListener listener) {
