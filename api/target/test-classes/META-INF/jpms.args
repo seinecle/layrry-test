@@ -1,0 +1,4 @@
+--patch-module
+pluginapi=_
+--add-reads
+pluginapi=ALL-UNNAMED

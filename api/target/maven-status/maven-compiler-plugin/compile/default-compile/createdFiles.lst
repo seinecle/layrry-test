@@ -1,0 +1,8 @@
+module-info.class
+api\PluginContext$Heartbeat.class
+api\Plugin.class
+api\PluginContext.class
+api\PluginRegistry.class
+api\PluginContext$HeartbeatListener.class
+api\AbstractPlugin.class
+api\PluginLifeCycleListener.class
