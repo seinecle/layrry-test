@@ -3,7 +3,8 @@ Creating a Javafx app:
 - modular (JPMS)
 - platform + plugins architecture. Plugins should be isolated in layers. Their dependencies should not conflict with each other. The platform should be able to load / unload plugins at runtime
 - packaged with jlink or else, for distribution on Mac, Win and linux
-The end goal is to create a desktop app to deliver trainings, exams and certificates, starting with  Gephi certificate. Roadmap of the project [available here](https://docs.google.com/document/d/18rcItxpQuwdJquuEkZEHstCP41iJVsfCttqkwcC7B5w/edit?usp=sharing).
+
+The end goal is to create a desktop app to deliver trainings, exams and certificates, starting with a Gephi certificate. Roadmap of the project [available here](https://docs.google.com/document/d/18rcItxpQuwdJquuEkZEHstCP41iJVsfCttqkwcC7B5w/edit?usp=sharing).
 
 # Development environment
 - Windows
