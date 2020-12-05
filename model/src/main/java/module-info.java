@@ -4,12 +4,7 @@
  * and open the template in the editor.
  */
 
-module net.clementlevallois.layrry.test {
-
-    requires org.moditect.layrry.platform;
-    requires layrry.core;
-    requires javafx.base;
-    requires host;
+module net.clementlevallois.model {
+    exports net.clementlevallois.model;
     requires javafx.graphics;
-    requires javafx.controls;
 }

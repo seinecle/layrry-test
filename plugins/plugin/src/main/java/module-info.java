@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-module plugin {
-    requires pluginapi;
+module net.clementlevallois.plugin {
+    
     requires javafx.graphics;
     requires javafx.controls;
+    requires transitive net.clementlevallois.model;
 
-    provides api.Plugin
-            with plugin.PluginA;
-    exports plugin;
+    provides net.clementlevallois.model.Plugin with net.clementlevallois.plugin.PluginA;
+    exports net.clementlevallois.plugin;
 }

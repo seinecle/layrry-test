@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 
-module host {
+module net.clementlevallois.app {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
-    exports host;
-    requires pluginapi;
-    uses api.Plugin;
-    uses api.AbstractPlugin;
+    exports net.clementlevallois.app;
+    requires net.clementlevallois.model;
+    requires net.clementlevallois.core;
+    
+    uses net.clementlevallois.model.Plugin;
 }

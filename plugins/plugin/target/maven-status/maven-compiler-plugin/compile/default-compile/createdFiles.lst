@@ -1,2 +1,2 @@
 module-info.class
-plugin\PluginA.class
+net\clementlevallois\plugin\PluginA.class

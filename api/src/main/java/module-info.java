@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import api.Plugin;
+import net.clementlevallois.model.Plugin;
 import org.moditect.layrry.platform.PluginLifecycleListener;
 
-import api.PluginLifeCycleListener;
+import net.clementlevallois.core.PluginLifeCycleListener;
 
 
 module pluginapi {
