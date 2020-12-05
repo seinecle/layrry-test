@@ -9,7 +9,9 @@ module net.clementlevallois.layrry.test {
     requires org.moditect.layrry.platform;
     requires layrry.core;
     requires javafx.base;
-    requires host;
+    requires net.clementlevallois.app;
+    requires net.clementlevallois.model;
+    requires net.clementlevallois.core;
     requires javafx.graphics;
     requires javafx.controls;
 }

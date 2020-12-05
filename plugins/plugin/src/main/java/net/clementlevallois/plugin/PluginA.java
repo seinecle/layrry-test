@@ -10,7 +10,7 @@ public class PluginA extends AbstractPlugin {
 
     @Override
     protected GridPane createPane(PluginContext context) {
-
+        System.out.println("salut du plugin!");
         GridPane pane = new GridPane();
         VBox vBox = new VBox(new Label("Léon est le plus intelligent depuis le plugin!!"));
         pane.add(vBox, 0, 1);

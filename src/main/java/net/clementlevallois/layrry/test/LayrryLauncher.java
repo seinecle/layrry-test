@@ -28,8 +28,9 @@ public class LayrryLauncher {
                 .withModule("org.openjfx:javafx-controls:jar:win:15.0.1")
                 .withModule("org.openjfx:javafx-graphics:jar:win:15.0.1")
                 .layer("core")
-                .withModule("net.clementlevallois:host:jar:1.0")
-                .withModule("net.clementlevallois:pluginapi:jar:1.0")
+                .withModule("net.clementlevallois:app:jar:1.0")
+                .withModule("net.clementlevallois:core:jar:1.0")
+                .withModule("net.clementlevallois:model:jar:1.0")
                 .withModule("org.moditect.layrry:layrry-platform:1.0-SNAPSHOT")
                 .withParent("javafx")
                 .layer("plugins")
@@ -37,7 +38,7 @@ public class LayrryLauncher {
                 .withModulesIn(Path.of("C:\\Users\\levallois\\Google Drive\\open\\layrry-test\\plugins"))
                 .build();
 
-        layers.run("host/host.PluginHostMain");
+        layers.run("net.clementlevallois.app/net.clementlevallois.app.Main");
     }
     
 }
