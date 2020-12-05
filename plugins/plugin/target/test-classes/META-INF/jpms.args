@@ -1,4 +1,0 @@
---patch-module
-net.clementlevallois.plugin=_
---add-reads
-net.clementlevallois.plugin=ALL-UNNAMED

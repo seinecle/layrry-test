@@ -13,7 +13,7 @@ public class PluginA extends AbstractPlugin {
         System.out.println("salut du plugin!");
         GridPane pane = new GridPane();
         VBox vBox = new VBox(new Label("Léon est le plus intelligent depuis le plugin!!"));
-        pane.add(vBox, 0, 1);
+        pane.add(vBox, 1, 0);
         return pane;
 
     }
