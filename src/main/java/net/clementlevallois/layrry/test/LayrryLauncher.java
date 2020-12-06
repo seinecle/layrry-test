@@ -35,7 +35,7 @@ public class LayrryLauncher {
                 .withParent("javafx")
                 .layer("plugins")
                 .withParent("core")                
-                .withModulesIn(Path.of("C:\\Users\\levallois\\Google Drive\\open\\layrry-test\\plugins"))
+                .withModulesIn(Path.of("plugins"))
                 .build();
 
         layers.run("net.clementlevallois.app/net.clementlevallois.app.Main");

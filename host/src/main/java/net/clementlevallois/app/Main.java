@@ -6,21 +6,22 @@ import javafx.scene.Group;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import net.clementlevallois.core.View;
 
 public class Main extends Application {
 
     private static final int TILE_WIDTH = 150;
-    private static final int TILE_HEIGHT = 150;
+private static final int TILE_HEIGHT = 150;
 
     @Override
     public void start(Stage stage) {
-
+        View view = new View(TILE_WIDTH, TILE_HEIGHT);
         PerspectiveCamera camera = new PerspectiveCamera();
         camera.setFieldOfView(10);
-        Scene scene = new Scene(new Group());
+        Scene scene = new Scene(new Group(view.getContent()));
         scene.setCamera(camera);
         PluginRegistry.getInstance().initializeDeferredPlugins();
-        stage.setTitle("Modular TilesFX");
+        stage.setTitle("Modular Tiles FX");
         stage.setScene(scene);
         stage.setMinWidth((TILE_WIDTH * 3) + 20);
         stage.setMinHeight(TILE_HEIGHT + 30);

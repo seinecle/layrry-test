@@ -18,6 +18,7 @@ public class PluginRegistry {
     private final Set<Plugin> deferredPlugins = new LinkedHashSet<>();
 
     public void registerPlugins(ModuleLayer key, Collection<Plugin> plugins) {
+        System.out.println("in the plugin registration");
         PluginContext context = PluginContext.getInstance();
 
         Map<String, Plugin> pluginMap = this.plugins.computeIfAbsent(key, k -> new LinkedHashMap<>());
